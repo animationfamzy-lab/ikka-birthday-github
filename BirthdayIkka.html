@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Sayanggkuu ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb6c1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 30px 10px;
+        }
+
+        /* HATI BERTERBANG */
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 25px;
+            animation: naik 7s linear infinite;
+            opacity: 0.8;
+            z-index: 0;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        @keyframes naik {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* KARTU */
+        .card {
+            position: relative;
+            z-index: 2;
+            width: 95%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 30px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            animation: muncul 1.5s ease;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* FOTO */
+        .foto {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #ff7b9c;
+            box-shadow: 0 8px 25px rgba(255, 80, 120, 0.4);
+            animation: fotoAnimasi 3s infinite ease-in-out;
+        }
+
+        @keyframes fotoAnimasi {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* JUDUL */
+        h1 {
+            margin-top: 20px;
+            font-size: 45px;
+            color: #ff4f81;
+        }
+
+        h2 {
+            margin-top: 10px;
+            color: #444;
+        }
+
+        .cake {
+            font-size: 60px;
+            margin: 15px 0;
+        }
+
+        /* TEKS */
+        .ucapan {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-top: 15px;
+        }
+
+        /* TOMBOL */
+        button {
+            margin-top: 25px;
+            padding: 15px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #ff4f81;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 79, 129, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #ff2865;
+        }
+
+        /* SURAT */
+        #surat {
+            display: none;
+            margin-top: 25px;
+            padding: 25px;
+            background: #fff1f5;
+            border-radius: 20px;
+            text-align: left;
+            color: #555;
+            line-height: 1.8;
+            animation: suratMuncul 1s ease;
+        }
+       #surat h3 {
+            text-align: center;
+            color: #ff4f81;
+            margin-bottom: 15px;
+        }
+
+        @keyframes suratMuncul {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .penutup {
+            text-align: center;
+            margin-top: 20px;
+            color: #ff4f81;
+            font-weight: bold;
+        }
+
+        /* CONFETTI */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            z-index: 10;
+            animation: confettiJatuh 4s linear forwards;
+        }
+
+        @keyframes confettiJatuh {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 500px) {
+
+            .card {
+                padding: 30px 18px;
+            }
+
+            .foto {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .ucapan {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HATI -->
+    <div class="heart">❤️</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+
+    <!-- KARTU UTAMA -->
+    <div class="card">
+
+        <!-- GANTI FOTO DI SINI -->
+        <img src="ikka.jpg" alt="Foto Ulang Tahun" class="foto">
+
+        <div class="cake">🎂</div>
+
+        <!-- GANTI NAMA DI SINI -->
+        <h1>Happy Birthday Sayanggku</h1>
+
+        <h2>Untuk Kamu ❤️</h2>
+
+        <p class="ucapan">
+            Selamat ulang tahun untuk seseorang yang spesial.
+            <br><br>
+
+            Semoga di usia yang baru ini,
+            semua hal baik datang kepadamu.
+            Semoga kamu selalu diberikan kesehatan,
+            kebahagiaan, kesuksesan,
+            dan dikelilingi orang-orang yang tulus menyayangimu.
+            <br><br>
+
+            Semoga semua impian yang kamu perjuangkan
+            perlahan menjadi kenyataan.
+        </p>
+
+        <!-- TOMBOL MUSIK -->
+        <button onclick="putarMusik()">
+            🎵 Putar Musik
+        </button>
+
+        <!-- TOMBOL SURAT -->
+        <button onclick="bukaSurat()">
+            💌 Buka Surat
+        </button>
+
+        <!-- SURAT -->
+        <div id="surat">
+
+            <h3>💌 Sebuah Surat Untukmu</h3>
+
+            <p>
+                Selamat ulang tahun, sayang ❤️
+                semoga di umur kamu yg sekarang,
+                semua hal baik datang satu persatu.
+                Semoga kamu selalu sehat, bahagia,
+                dimudahkan dalam segala urusan, dan bisa
+                mencapai semua yg kamu impikan.
+            
+                <br><br>
+
+                Semoga tahun ini membawa banyak kebahagiaan
+                buat kamu. Dan semoga, di antara banyak hal
+                indah yang kamu temukan nanti, aku masih menjadi
+                salah satunya.
+                <br><br>
+
+                Jangan takut untuk bermimpi besar.
+                Jangan menyerah ketika keadaan terasa sulit.
+                Percayalah bahwa kamu mampu melewati
+                setiap proses yang ada.
+                <br><br>
+
+                Terima kasih sudah menjadi seseorang
+                yang begitu berarti.
+                Semoga senyummu selalu ada,
+                dan semoga hari-harimu selalu dipenuhi
+                hal-hal yang membuatmu bahagia.
+
+                <br><br>
+
+                Dan terakhir saya mau pake bahasa makassar.
+                Jangki pernah merasa sendiri karna bakalan
+                selalu ja ada untuk kita, jangki insecure,
+                jangki nda pede juga karna cantikki.
+                Jangki takut mencoba sesuatu karna bakalan selalu ka
+                support ki apapun yg terjadi.
+                Itumo kekna karna panjang skalimi.
+
+                <br><br>
+
+                i love you ikka cantikk, alwayss.
+            </p>
+
+            <div class="penutup">
+                Selamat ulang tahun sekali lagi sayanggku ❤️<br>
+                Dari Fahmi untuk ikka.
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MUSIK -->
+    <audio id="musik" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+
+        /* MUSIK */
+        function putarMusik() {
+
+            const musik = document.getElementById("musik");
+
+            if (musik.paused) {
+                musik.play();
+            } else {
+                musik.pause();
+            }
+
+        }
+    /* BUKA SURAT */
+        function bukaSurat() {
+
+            const surat = document.getElementById("surat");
+
+            if (surat.style.display === "block") {
+                surat.style.display = "none";
+            } else {
+                surat.style.display = "block";
+                buatConfetti();
+            }
+
+        }
+
+        /* CONFETTI */
+        function buatConfetti() {
+
+            for (let i = 0; i < 80; i++) {
+
+                const confetti = document.createElement("div");
+
+                confetti.classList.add("confetti");
+
+                confetti.style.left = Math.random() * 100 + "vw";
+
+                confetti.style.animationDuration =
+                    (Math.random() * 3 + 2) + "s";
+
+                confetti.style.transform =
+                    "rotate(" + Math.random() * 360 + "deg)";
+
+                document.body.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
